@@ -1,0 +1,257 @@
+<link rel="stylesheet" href="../css/style-estatisticas.css">
+<body id="estatisticas">
+    <nav class="navbar">
+        <h1>Maracufy</h1>
+        <a href="#" class="botao-menu">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+                <li><a href="https://maracufy.herokuapp.com/busca">
+                    <img src="../img/search.png" alt="icon-busca" id="icon-busca">
+                    Busca
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/estatisticas" id="menu-atual">
+                    <img src="../img/trending-yellow.png" alt="icon-estatisticas" id="icon-estatisticas">
+                    Estatísticas
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/perfil">
+                    <img src="../img/user.png" alt="icon-perfil" id="icon-perfil">
+                    Perfil
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/">
+                    <img src="../img/logout.png" alt="icon-sair" id="icon-sair">
+                    Sair
+                </a></li>
+            </ul>
+          </div>
+    </nav>
+    
+    <div class="estatisticas-wrapper">
+        <div class="estatisticas-data-3">
+            <h2 class="titulo-pagina">Músicas em destaque</h2>
+            <p class="texto-pagina">Músicas mais bem avaliadas na última semana.</p>
+            <div id="destaque-musicas">
+                {{#each musicas_destaques_semana}}
+                <div class="destaque-musica">
+                    <div class="destaque-musica-numero">{{inc @index}}</div>
+                    <img class="destaque-musica-capa" src="{{url_foto}}" alt="">
+                    <div class="destaque-musica-span">
+                        <p class="destaque-musica-nome"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome}}</a></p>
+                        <p class="destaque-musica-artista">{{nomesartistas}}</p>
+                        <p class="destaque-musica-nota">⭐ {{nota}}/10</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="estatisticas-data-3">
+            <h2 class="titulo-pagina">Artistas em destaque</h2>
+            <p class="texto-pagina">Artistas com mais músicas bem avaliadas na última semana.</p>
+            <div id="destaque-artistas">
+                {{#each artistas_destaques_semana}}
+                <div class="destaque-artista">
+                    <div class="destaque-artista-numero">{{inc @index}}</div>
+                    <img class="destaque-artista-foto" src="{{url_foto}}" alt="">
+                    <div class="destaque-artista-span">
+                        <p class="destaque-artista-nome">{{nome}}</p>
+                        <p class="destaque-artista-genero">{{generos}}</p>
+                        <p class="destaque-artista-nota">⭐ {{nota}}/10</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="estatisticas-data-3">
+            <h2 class="titulo-pagina">Usuários em destaque</h2>
+            <p class="texto-pagina">Usuários com mais curtidas em suas reviews realizadas na última semana.</p>
+            <div id="destaque-usuarios">
+                {{#each usuarios_destaques_semana}}
+                <div class="destaque-usuario">
+                    <div class="destaque-usuario-numero">{{inc @index}}</div>
+                    <img class="destaque-usuario-foto" src="{{url_foto}}" alt="">
+                    <div class="destaque-usuario-span">
+                        <p class="destaque-usuario-nome">{{nome}}</p>
+                        <p class="destaque-usuario-curtidas">👍 {{likes}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="estatisticas-wrapper">
+        <div class="estatisticas-data">
+            <h2 class="titulo-pagina">Últimas reviews realizadas</h2>
+            <div id="ultimas-reviews">
+                {{#each reviews_recentes}}
+                <div class="review-usuario">
+                    <img class="review-capa-album" src="{{album_foto}}">
+                    <div class="review-span">
+                        <span class="review-nome-usuario">{{nome}}</span>
+                        <span class="review-date">{{data}}</span>
+                        <span class="review-nota">⭐	Avaliação: </span>
+                        <span class="review-nota-dada">{{nota}}/10</span>
+                        <span class="review-nota">👍 Curtidas:</span>
+                        <span class="review-curtidas-dadas">{{relevancia}} <br/></span>
+                        <span class="review-nome-musica"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome_musica}}</a></span>
+                        <span class="review-nome-artista">{{artistas}}</span>
+                        <p class="review-conteudo"> {{comentario}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="estatisticas-wrapper">
+        <div class="estatisticas-data-2">
+            <h2 class="titulo-pagina">Músicas mais bem avaliadas</h2>
+            <p class="texto-pagina">Músicas com as maiores médias de avaliações recebidas na plataforma.</p>
+            <div id="musicas-mais-bem-avaliadas">
+                {{#each musicas_destaques}}
+                <div class="musica-avaliada">
+                    <div class="destaque-musica-numero">{{inc @index}}</div>
+                    <img class="destaque-musica-capa" src="{{url_foto}}" alt="">
+                    <div class="destaque-musica-span">
+                        <p class="destaque-musica-nome"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome}}</a></p>
+                        <p class="destaque-musica-artista">{{nomesartistas}}</p>
+                        <p class="destaque-musica-nota">⭐ {{nota}}/10</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="estatisticas-data-2">
+            <h2 class="titulo-pagina">Músicas mais populares</h2>
+            <p class="texto-pagina">Músicas com as maiores quantidades de avaliações realizadas na plataforma.</p>
+            <div id="musicas-mais-populares">
+                {{#each musicas_populares}}
+                <div class="musica-avaliada">
+                    <div class="destaque-musica-numero">{{inc @index}}</div>
+                    <img class="destaque-musica-capa" src="{{url_foto}}" alt="">
+                    <div class="destaque-musica-span">
+                        <p class="destaque-musica-nome"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome}}</a></p>
+                        <p class="destaque-musica-artista">{{nomesArtistas}}</p>
+                        <p class="destaque-musica-nota">⭐ {{popularidade}} avaliações</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="estatisticas-wrapper">
+        <div class="estatisticas-data">
+            <h2 class="titulo-pagina">Reviews mais populares</h2>
+            <p class="texto-pagina">Reviews com as maiores quantidades de curtidas deixadas na plataforma.</p>
+            <div id="reviews-mais-populares">
+                {{#each reviews_populares}}
+                <div class="review-usuario">
+                    <img class="review-capa-album" src="{{album_foto}}">
+                    <div class="review-span">
+                        <span class="review-nome-usuario">{{nome}}</span>
+                        <span class="review-date">{{data}}</span>
+                        <span class="review-nota">⭐	Avaliação: </span>
+                        <span class="review-nota-dada">{{nota}}/10</span>
+                        <span class="review-nota">👍 Curtidas:</span>
+                        <span class="review-curtidas-dadas">{{relevancia}} <br/></span>
+                        <span class="review-nome-musica"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome_musica}}</a></span>
+                        <span class="review-nome-artista">{{artistas}}</span>
+                        <p class="review-conteudo"> {{comentario}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="estatisticas-wrapper">
+        <div class="estatisticas-data-2">
+            <h2 class="titulo-pagina">Artistas mais bem avaliados</h2>
+            <p class="texto-pagina">Artistas com as maiores médias de avaliações recebidas na plataforma para suas músicas.</p>
+            <div id="artistas-mais-bem-avaliados">
+                {{#each artistas_destaques}}
+                <div class="artista-avaliado">
+                    <div class="destaque-artista-numero">{{inc @index}}</div>
+                    <img class="destaque-artista-foto" src="{{url_foto}}" alt="">
+                    <div class="destaque-artista-span">
+                        <p class="destaque-artista-nome">{{nome}}</p>
+                        <p class="destaque-artista-genero">{{generos}}</p>
+                        <p class="destaque-artista-nota">⭐ {{nota}}/10</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="estatisticas-data-2">
+            <h2 class="titulo-pagina">Artistas mais populares</h2>
+            <p class="texto-pagina">Artistas com as maiores quantidades de avaliações realizadas na plataforma para suas músicas.</p>
+            <div id="artistas-mais-populares">
+                {{#each artistas_populares}}
+                <div class="artista-avaliado">
+                    <div class="destaque-artista-numero">{{inc @index}}</div>
+                    <img class="destaque-artista-foto" src="{{url_foto}}" alt="">
+                    <div class="destaque-artista-span">
+                        <p class="destaque-artista-nome">{{nome}}</p>
+                        <p class="destaque-artista-genero">{{generos}}</p>
+                        <p class="destaque-artista-nota">⭐ {{nreviews}} avaliações</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        </div>
+
+        <div class="estatisticas-wrapper">
+        <div class="estatisticas-data">
+            <h2 class="titulo-pagina">Usuários mais populares</h2>
+            <p class="texto-pagina">Usuários com mais curtidas em suas reviews.</p>
+            <div id="destaque-usuarios-total">
+                {{#each usuarios_populares}}
+                <div class="destaque-usuario-total">
+                    <div class="destaque-usuario-numero">{{inc @index}}</div>
+                    <img class="destaque-usuario-foto" src="{{url_foto}}" alt="">
+                    <div class="destaque-usuario-span">
+                        <p class="destaque-usuario-nome">{{nome}}</p>
+                        <p class="destaque-usuario-curtidas">👍 {{likes}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <footer>    
+        <footer>
+        <nav>
+        
+            <a href="https://github.com/luizabm/maracufy-BD1" class="githubprojeto" target="_blank">
+                <h2 id="githubs">Github</h2>
+                <img src="../img/github-white.png" alt="logo github" id="img-github">
+            </a>
+        
+            <ul>
+                <li> <a href="https://github.com/ahmadkamel7" target="_blank"> Ahmad Kamel Abdouni</a> </li>
+                <li> <a href="https://github.com/sm-gian" target="_blank"> Gianlucca Siqueira Maiellaro</a> </li>
+                <li> <a href="https://github.com/luizabm" target="_blank"> Luiza Borghi de Mello</a> </li>
+                <li> <a href="https://github.com/iwamotoraphael" target="_blank"> Raphael Nobuaki Iwamoto</a> </li>
+            </ul>
+        </nav>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script><!--defer-->
+
+</body>

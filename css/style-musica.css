@@ -1,0 +1,393 @@
+.review-data{
+  background-color: var(--cor5);
+  border: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+  margin: 10px 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.review-data > div > p{
+  color: var(--cor2);
+  margin: 10px 0px;
+}
+
+.review-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.dados-musica, .dados-artista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dado-musica {
+  padding-right: 20px;
+}
+
+#dado-foto {
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  margin: auto 10px auto auto;
+  justify-content: center;
+
+}
+
+#dado-nome, #dado-nome-artista {
+  font-weight: 800;
+  font-size: 1.3em;
+}
+
+.dado-artista {
+  padding-right: 50px;
+}
+
+#dado-nome-album {
+  font-size: 1.1em;
+}
+
+#dado-foto-artista {
+  width: 150px;
+  height: 150px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  margin: auto;
+  justify-content: center;
+}
+
+#dado-genero-titulo, #player-titulo {
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.dado-genero-nome {
+    background-color: var(--cor4);
+    color: #b1b9d6;
+    font-size: 0.8em;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+}
+
+#logo-spotify {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+iframe {
+  margin: 10px;
+}
+
+.tab {
+  width: 266px;
+  margin-bottom: 20px;
+}
+
+.dado-artista-similar-foto {
+  width: 64px;
+  height: 64px;
+  border: 5px;
+  margin-left: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.dado-artista-similar-nome {
+  font-weight: 600;
+  font-size: 0.85em;
+  padding-top: 8px;
+}
+
+#dado-artista-similar-span {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.dado-artista-similar {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+#conteudo-artista {
+  margin-top: 20px;
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#barra-progresso {
+  background-color: black;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#barra-progresso > div {
+  background-color: var(--cor9);
+  height: 20px;
+  border-radius: 10px;
+}
+
+.nome-atributo {
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.user-review-data {
+  background-color: var(--cor5);
+  padding: 25px;
+  border-radius: 10px;
+  width: 1060px;
+  min-height: 200px;
+  max-height: 1500px;
+  margin: 10px 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.user-review-history {
+  background-color: var(--cor5);
+  padding: 25px;
+  border-radius: 10px;
+  width: 1060px;
+  min-height: 200px;
+  max-height: 1500px;
+  margin: 10px 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+#conteudo-reviews-feitas {
+  border-radius: 10px;
+  border-color: var(--cor6);
+  border-width: 2px;
+  width: 1080px;
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.review-usuario {
+  border-radius: 10px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  padding: 25px;
+  border: 2px solid var(--cor4);
+}
+
+.review-capa-album {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.review-nome-usuario {
+  font-weight: 600;
+  font-size: 1.1em;
+  padding-top: 8px;
+}
+
+.review-date {
+  font-size: 0.8em;
+}
+
+.review-nota {
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.review-nota-dada, .review-curtidas-dadas {
+  font-size: 0.8em;
+}
+
+.review-curtir, .review-apagar {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+#like button, #analise, #apagar button {
+  background-color: var(--cor9);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#like button:hover, #analise:hover, #apagar button:hover  {
+  background-color: #b1b9d6;
+}
+
+#like button.active, #analise.active, #apagar button.active {
+  background-color: #ccc;
+}
+
+.user-review-data form {
+  text-align: center;
+}
+
+.tab-album {
+  width: 150.5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: var(--cor9);
+  border-radius: 5px;
+  margin: auto;
+}
+
+.tab-album button {
+  background-color: var(--cor9);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button p {
+  font-family: "Poppins", sans-serif;
+}
+
+.tab-album button:hover {
+  background-color: #b1b9d6;
+}
+
+.tab-album button.active {
+  background-color: #ccc;
+}
+
+#conteudo-album {
+  margin-top: 20px;
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.dado-musica-circulo {
+  background-color: var(--cor9);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.dado-musica-numero {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.dado-musica-nome {
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+#dado-musica-span {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#dado-musica-span a {
+  color: black;
+}
+
+#dado-musica-span a:hover, #dado-musica-span a.active {
+  color: var(--cor4);
+}
+
+.dado-musica-album {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+  /* RESPONSIVIDADE */
+
+  @media (max-width: 1140px) {
+    .review-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .review-data, .user-review-data, .user-review-history, #conteudo-reviews-feitas {
+      width: 85vw;
+    }
+  }
+
+  @media (max-width: 714px) {
+    input {
+      width: 270px;
+    }
+  }
+
+  @media (max-width: 592px) {
+    #conteudo-atributos > p {
+      font-size: 2.8vw;
+    }
+  }
+
+  @media (max-width: 526px) {
+    .review-data, .user-review-data, .user-review-history, #conteudo-reviews-feitas {
+      width: 75vw;
+    }
+  }
+  @media (max-width: 480px) {
+    #dado-foto, #dado-foto-artista {
+      width: 40vw;
+      height: 40vw;
+    }
+
+    #dado-nome, #dado-nome-artista {
+      font-size: 1.1em;
+    }
+
+    #dado-nome-album {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 388px) {
+    #conteudo-atributos > p {
+      font-size: 3.2vw;
+    }
+  }
+
+  @media (max-width: 362px) {
+    .tab {
+      width: 55vw;
+    }
+
+    input {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 312px) {
+    .navbar > h1 {
+      font-size: 35px;
+    }
+
+    #conteudo-atributos > p {
+      font-size: 3.4vw;
+    }
+  }

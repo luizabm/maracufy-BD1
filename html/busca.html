@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maracufy | Busca</title>
+    <link rel="stylesheet" href="../css/style-default.css">
+    <link rel="stylesheet" href="../css/style-busca.css">
+    <script src="../js/menu.js" defer></script>
+    
+</head>
+<body id="busca">
+    <nav class="navbar">
+        <h1>Maracufy</h1>
+        <a href="#" class="botao-menu">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+                <li><a href="https://maracufy.herokuapp.com/busca" id="menu-atual">
+                    <img src="../img/search-yellow.png" alt="icon-busca" id="icon-busca">
+                    Busca
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/estatisticas">
+                    <img src="../img/trending.png" alt="icon-estatisticas" id="icon-estatisticas">
+                    Estatísticas
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/perfil">
+                    <img src="../img/user.png" alt="icon-perfil" id="icon-perfil">
+                    Perfil
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/">
+                    <img src="../img/logout.png" alt="icon-sair" id="icon-sair">
+                    Sair
+                </a></li>
+            </ul>
+          </div>
+    </nav>
+    
+    <div id="container">
+        <h2 class="titulo-pagina">Busca por músicas</h2>
+        <p class="texto-pagina">Digite abaixo o nome de algum artista, álbum ou música para encontrar a canção que deseja avaliar. A busca é feita por meio do Spotify e todas as músicas são fornecidas pela própria plataforma. A partir da escolha da música, você será redirecionado a uma nova página para fazer a review da música de interesse. Aproveite!! 😉</p>
+        <div class="wrapper">
+            <div class="barrainput">
+                <input type="search" id="barradebusca" placeholder="Digite o nome de uma música.">
+            </div>
+        </div>
+        <div id="conteudo-busca"></div>
+        
+    </div>
+
+        <footer>
+        <nav>
+        
+            <a href="https://github.com/luizabm/maracufy-BD1" class="githubprojeto" target="_blank">
+                <h2 id="githubs">Github</h2>
+                <img src="../img/github-white.png" alt="logo github" id="img-github">
+            </a>
+        
+            <ul>
+                <li> <a href="https://github.com/ahmadkamel7" target="_blank"> Ahmad Kamel Abdouni</a> </li>
+                <li> <a href="https://github.com/sm-gian" target="_blank"> Gianlucca Siqueira Maiellaro</a> </li>
+                <li> <a href="https://github.com/luizabm" target="_blank"> Luiza Borghi de Mello</a> </li>
+                <li> <a href="https://github.com/iwamotoraphael" target="_blank"> Raphael Nobuaki Iwamoto</a> </li>
+            </ul>
+        </nav>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script><!--defer-->
+</body>
+</html>

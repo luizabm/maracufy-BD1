@@ -1,0 +1,329 @@
+.profile-data{
+  background-color: var(--cor5);
+  border: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 500px;
+  height: 750px;
+  margin: 15px 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.atividade {
+  background-color: var(--cor5);
+  border: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  width: 1080px;
+  min-height: 200px;
+  max-height: 1500px;
+  margin: 15px 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+#reviews-usuario {
+  border-radius: 10px;
+  border-color: var(--cor6);
+  border-width: 2px;
+  width: 1080px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.review-usuario {
+  border-radius: 10px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  padding: 25px;
+  border: 2px solid var(--cor4);
+}
+
+.review-capa-album {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.review-nome-musica {
+  font-weight: 600;
+  font-size: 0.9em;
+  padding-top: 8px;
+}
+
+.review-nome-musica a {
+  color: black;
+}
+
+.review-nome-musica a:hover, .review-nome-musica a.active {
+  color: var(--cor4);
+}
+
+.review-nome-artista {
+  font-size: 0.8em;
+}
+
+.review-nota {
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.review-nota-dada, .review-curtidas-dadas {
+  font-size: 0.8em;
+}
+
+#curtidas-usuario {
+  border-radius: 10px;
+  border-color: var(--cor6);
+  border-width: 2px;
+  width: 1080px;
+  max-height: 390px;
+  overflow-y: scroll;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.curtida-usuario {
+  border-radius: 10px;
+  width: 420px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  padding: 25px;
+  border: 2px solid var(--cor4);
+}
+
+.curtida-foto {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.curtidas-span {
+  margin-top: 12px;
+}
+
+.profile-data > div > p{
+  color: var(--cor2);
+  margin: 10px 0px;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.resto-profile{
+  padding-top: 30px;
+  margin: 45px 15px;
+}
+
+#dado-nome {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+#dado-foto {
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+#logo-spotify {
+  width: 50px;
+  height: 50px;
+}
+
+#topartists {
+  overflow-y: scroll;
+  height: 350px;
+}
+
+.dado-artista-circulo {
+  background-color: var(--cor9);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.dado-artista-numero {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.dado-artista-foto {
+  width: 64px;
+  height: 64px;
+  border: 5px;
+  margin-left: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.dado-artista-nome {
+  font-weight: 600;
+  font-size: 0.85em;
+  padding-top: 8px;
+}
+
+#dado-artista-span {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.dado-artista {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+#toptracks {
+  margin-top: 20px;
+  height: 640px;
+  overflow-y: scroll;
+}
+
+.dado-musica-circulo {
+  background-color: var(--cor9);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.dado-musica-numero {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.dado-musica-capa {
+  width: 64px;
+  height: 64px;
+  border: 5px;
+  margin-left: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.dado-musica-nome {
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+#dado-musica-span a {
+  color: black;
+}
+
+#dado-musica-span a:hover, #dado-musica-span a.active {
+  color: var(--cor4);
+}
+
+.dado-musica-artista {
+  font-size: 0.8em;
+}
+
+#dado-musica-span {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.dado-musica {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.dados {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#logo-spotify {
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  width: 347px;
+}
+
+/* RESPONSIVIDADES */
+
+@media (max-width: 1158px) {
+  .atividade, #reviews-usuario, #curtidas-usuario {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 844px) {
+  .personal-data {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-data, .inner-profile-data, .atividade, #reviews-usuario, #curtidas-usuario {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 606px) {
+  .atividade, #reviews-usuario, #curtidas-usuario {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 512px) {
+  .tab {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  button > p {
+    font-size: 0.9em;
+  }
+
+  #topartists {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 418px) {
+  #topartists {
+    height: 323px;
+  }
+    
+  #toptracks {
+    height: 620px;
+  }
+}
+
+@media (max-width: 388px) {
+ .titulo-pagina {
+   font-size: 115%;
+ }
+}
+
+@media (max-width: 312px) {
+  .navbar > h1 {
+    font-size: 35px;
+  }
+}
+
+

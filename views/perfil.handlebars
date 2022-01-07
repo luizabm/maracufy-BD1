@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="../css/style-perfil.css">
+<body id="perfil">
+    <nav class="navbar">
+        <h1>Maracufy</h1>
+        <a href="#" class="botao-menu">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+                <li><a href="https://maracufy.herokuapp.com/busca">
+                    <img src="../img/search.png" alt="icon-busca" id="icon-busca">
+                    Busca
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/estatisticas">
+                    <img src="../img/trending.png" alt="icon-estatisticas" id="icon-estatisticas">
+                    Estatísticas
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/perfil" id="menu-atual">
+                    <img src="../img/user-yellow.png" alt="icon-perfil" id="icon-perfil">
+                    Perfil
+                </a></li>
+                <li><a href="https://maracufy.herokuapp.com/">
+                    <img src="../img/logout.png" alt="icon-sair" id="icon-sair">
+                    Sair
+                </a></li>
+            </ul>
+          </div>
+    </nav>
+
+
+    <div class="profile-wrapper personal-data">
+        <div class="profile-data">
+            <h2 class="titulo-pagina">Usuário</h2>
+            <div id="userdata"></div>
+            <h2 class="titulo-pagina">Artistas mais ouvidos</h2>
+            <div class="tab">
+                <button id="artists-shortterm"><p>Curto prazo</p></button>
+                <button id="artists-mediumterm"><p>Médio prazo</p></button>
+                <button id="artists-longterm"><p>Longo prazo</p></button>
+            </div>
+            <div class="inner-profile-data" id="topartists"></div>
+        </div>
+        <div class="profile-data">
+            <h2 class="titulo-pagina">Músicas mais ouvidas</h2>
+            <div class="tab">
+                <button id="songs-shortterm"><p>Curto prazo</p></button>
+                <button id="songs-mediumterm"><p>Médio prazo</p></button>
+                <button id="songs-longterm"><p>Longo prazo</p></button>
+            </div>
+            <div id="toptracks"></div>
+        </div>
+    </div>
+
+        <div class="profile-wrapper">
+        <div class="atividade">
+            <h2 class="titulo-pagina">Atividade</h2>
+            <p class="texto-pagina"> As interações envolvendo seu perfil e a plataforma estão dispostas a seguir: suas reviews e curtidas fornecidas por outros usuários :)</p>
+            <h2 class="titulo-pagina-2">Reviews</h2>
+            <div id="reviews-usuario"> 
+                {{#each reviews}}
+                <div class="review-usuario">
+                    <img class="review-capa-album" src="{{url_foto}}">
+                    <div class="review-span">
+                        <span class="review-nome-musica"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome}}</a></span>
+                        <span class="review-nome-artista">{{artistas}}<br/></span>
+                        <span class="review-nota">⭐	Avaliação: </span>
+                        <span class="review-nota-dada">{{nota}}/10</span>
+                        <span class="review-nota">👍 Curtidas:</span>
+                        <span class="review-curtidas-dadas">{{relevancia}}</span>
+                        <p class="review-conteudo"> {{comentario}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div> 
+        </div>
+    </div>
+
+    <div class="profile-wrapper">
+        <div class="atividade">
+            <h2 class="titulo-pagina-2">Curtidas</h2>
+            <div id="curtidas-usuario">
+                {{#each likes}}
+                <div class="curtida-usuario">
+                    <img class="curtida-foto" src="{{url_foto}}">
+                    <div class="curtidas-span">
+                        <p class="review-nome-musica"><a href="https://maracufy.herokuapp.com/musica/?id={{id_musica}}" target="_blank">{{nome}}</a></p>
+                        <p class="review-nome-artista">{{artistas}}</p>
+                        <p class="curtidas-conteudo"> {{curtidor}} curtiu sua review!</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+
+    <footer>    
+        <footer>
+        <nav>
+        
+            <a href="https://github.com/luizabm/maracufy-BD1" class="githubprojeto" target="_blank">
+                <h2 id="githubs">Github</h2>
+                <img src="../img/github-white.png" alt="logo github" id="img-github">
+            </a>
+        
+            <ul>
+                <li> <a href="https://github.com/ahmadkamel7" target="_blank"> Ahmad Kamel Abdouni</a> </li>
+                <li> <a href="https://github.com/sm-gian" target="_blank"> Gianlucca Siqueira Maiellaro</a> </li>
+                <li> <a href="https://github.com/luizabm" target="_blank"> Luiza Borghi de Mello</a> </li>
+                <li> <a href="https://github.com/iwamotoraphael" target="_blank"> Raphael Nobuaki Iwamoto</a> </li>
+            </ul>
+        </nav>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script><!--defer-->
+
+</body>

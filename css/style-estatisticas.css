@@ -1,0 +1,296 @@
+.estatisticas-data {
+  background-color: var(--cor5);
+    border: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 1070px;
+    height: 600px;
+    margin: 10px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+
+.estatisticas-data-2 {
+    background-color: var(--cor5);
+    border: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 500px;
+    height: 550px;
+    margin: 10px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  }
+
+  .estatisticas-data-3 {
+    background-color: var(--cor5);
+    border: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 310px;
+    height: 450px;
+    margin: 10px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  }
+  
+  .estatisticas-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  #destaque-musicas, #destaque-artistas, #destaque-usuarios {
+    margin-top: 20px;
+    height: 320px;
+    overflow-y: scroll;
+  }
+
+  .destaque-musica, .destaque-artista, .destaque-usuario {
+    max-width: 250px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  .destaque-usuario {
+    margin-bottom: 25px;
+  }
+
+  .destaque-usuario-total {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  .destaque-musica-numero, .destaque-artista-numero, .destaque-usuario-numero {
+    background-color: var(--cor9);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  .destaque-musica-capa, .destaque-artista-foto, .destaque-usuario-foto {
+    width: 50px;
+    height: 50px;
+    border: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  }
+  
+  .destaque-musica-nome, .destaque-artista-nome, .destaque-usuario-nome {
+    font-weight: 600;
+    font-size: 0.85em;
+  }
+
+  .destaque-musica-nome a {
+    color: black;
+  }
+
+  .destaque-musica-nome a:hover, .destaque-musica-nome a.active {
+    color: var(--cor4);
+  }
+  
+  .destaque-musica-artista, .destaque-artista-genero {
+    font-size: 0.8em;
+  }
+
+  .destaque-musica-nota, .destaque-artista-nota, .destaque-usuario-curtidas {
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+  
+  #destaque-musica-span, #destaque-artista-span, #destaque-usuario-span {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  #ultimas-reviews {
+    margin-top: 20px;
+    height: 530px;
+    overflow-y: scroll;
+  }
+
+  #reviews-mais-populares {
+    margin-top: 20px;
+    height: 480px;
+    overflow-y: scroll;
+  }
+
+  #destaque-usuarios-total {
+    margin-top: 20px;
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  .review-usuario {
+    border-radius: 10px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 25px;
+    border: 2px solid var(--cor4);
+  }
+
+  .review-capa-album {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  }
+
+  .review-nome-usuario {
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-top: 8px;
+  }
+
+  .review-date {
+    font-size: 0.8em;
+  }
+
+  .review-nota {
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+
+  .review-nome-musica {
+    font-weight: 600;
+    font-size: 0.9em;
+    padding-top: 8px;
+  }
+
+  .review-nome-musica a {
+    color: black;
+  }
+
+  .review-nome-musica a:hover, .review-nome-musica a.active {
+    color: var(--cor4);
+  }
+
+  .review-nome-artista {
+    font-size: 0.8em;
+  }
+
+  .review-nota-dada, .review-curtidas-dadas {
+    font-size: 0.8em;
+  }
+
+
+  #musicas-mais-bem-avaliadas, #musicas-mais-populares, #artistas-mais-bem-avaliados, #artistas-mais-populares {
+    margin-top: 20px;
+    height: 400px;
+    overflow-y: scroll;
+  }
+
+  .musica-avaliada, .artista-avaliado {
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  #generos-mais-populares {
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: scroll;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .destaque-genero {
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  .destaque-genero-numero {
+    background-color: var(--cor9);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .destaque-genero-foto {
+    background-color: var(--cor4);
+    width: 50px;
+    height: 50px;
+    border: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+  }
+
+  .destaque-genero-nome {
+    font-weight: 600;
+    font-size: 0.85em;
+  }
+
+  .destaque-genero-nota {
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+
+  /* RESPONSIVIDADE */
+
+  @media (max-width: 1120px) {
+    .titulo-pagina {
+      font-size: 2vw;
+    }
+    .texto-pagina {
+      font-size: 1.4vw;
+    }
+  }
+
+  @media (max-width: 786px) {
+
+    .estatisticas-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .estatisticas-data, .estatisticas-data-2, .estatisticas-data-3 {
+      width: 70vw;
+    }
+    .titulo-pagina {
+      font-size: 1.5em;
+    }
+    .texto-pagina {
+      font-size: 0.8em;
+    } 
+  }
+
+  @media (max-width: 520px) {
+    .titulo-pagina {
+      font-size: 1.3em;
+    }
+  }
+
+  @media (max-width: 410px) {
+    #destaque-musicas, #destaque-artistas, #destaque-usuarios, #ultimas-reviews, #reviews-mais-populares, #musicas-mais-bem-avaliadas, #musicas-mais-populares, #artistas-mais-bem-avaliados, #artistas-mais-populares {
+      height: 60%;
+    }
+  }
+
+  @media (max-width: 312px) {
+    .navbar > h1 {
+      font-size: 35px;
+    }
+  }
